@@ -2,6 +2,12 @@
 
 Dashboard interactivo en español para explorar ChatGPT Sites, Lovable, Vercel, GitHub Pages, Render y Cloudflare.
 
+## GitHub Pages
+
+URL del dashboard: https://luisa-arroyave.github.io/CursoIA/
+
+La publicación usa la raíz de la rama main. Los nuevos commits en esa rama actualizan el sitio automáticamente. El archivo .nojekyll permite servir el proyecto directamente como contenido estático.
+
 ## Abrir
 
 Abre **index.html** en cualquier navegador moderno. Es autónomo: incluye los estilos, el código y los datos; no requiere instalación, compilación, conexión a servicios ni claves.
