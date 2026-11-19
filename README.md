@@ -8,6 +8,20 @@ URL del dashboard: https://luisa-arroyave.github.io/CursoIA/
 
 La publicación usa la raíz de la rama main. Los nuevos commits en esa rama actualizan el sitio automáticamente. El archivo .nojekyll permite servir el proyecto directamente como contenido estático.
 
+## Vercel
+
+URL de producción: https://cursoia-green.vercel.app/
+
+El proyecto cursoia está en el espacio luisa-fda. El despliegue de producción es público y no requiere iniciar sesión.
+
+Vercel ejecuta build.cjs y publica únicamente dist/index.html. .vercelignore limita los archivos enviados; .gitignore excluye la sesión local de Vercel, los perfiles del navegador y la salida de compilación.
+
+Para volver a publicar desde una sesión autorizada de Vercel:
+
+    npx --yes vercel@latest --prod --yes --scope luisa-fda
+
+La actualización automática desde GitHub requiere completar la conexión de GitHub en la cuenta de Vercel.
+
 ## Abrir
 
 Abre **index.html** en cualquier navegador moderno. Es autónomo: incluye los estilos, el código y los datos; no requiere instalación, compilación, conexión a servicios ni claves.
