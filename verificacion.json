@@ -1,0 +1,29 @@
+{
+  "passed": 24,
+  "checks": [
+    "Six platform cards",
+    "No horizontal overflow on desktop",
+    "Search by solution",
+    "Selection capped at three",
+    "Fourth selection visibly refused",
+    "Fourth checkbox reset",
+    "Detailed comparison has at most three platforms",
+    "Matrix has all eleven capabilities",
+    "Matrix cell opens explanation",
+    "Cell has official source",
+    "Shared filters reduce chart rows",
+    "Selection survives filtering",
+    "Removing preserves filter",
+    "Login requirement excludes native-unavailable Pages",
+    "Empty state",
+    "Six cost cards",
+    "All 25 official sources",
+    "Global recommendation and alternative",
+    "Assistant transfers selection",
+    "Enterprise requirements block automatic recommendation",
+    "Enterprise warning is visible",
+    "Sensitive data block automatic recommendation",
+    "No horizontal overflow on mobile",
+    "Mobile filters expand"
+  ]
+}

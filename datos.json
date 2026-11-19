@@ -1,0 +1,667 @@
+{
+  "metadata": {
+    "title": "Deployment Explorer",
+    "version": "1.0",
+    "verified_on": "2026-11-18",
+    "currency": "USD",
+    "language": "es",
+    "audience": "Directivos y trabajadores del conocimiento",
+    "methodology": "Comparacion cualitativa basada en documentacion oficial. No representa una prueba de rendimiento ni una auditoria de seguridad.",
+    "platform_count": 6
+  },
+  "status_legend": {
+    "included": {
+      "label": "Incluido",
+      "description": "La plataforma ofrece esta capacidad en su propio entorno."
+    },
+    "configurable": {
+      "label": "Configurable",
+      "description": "Se puede conseguir con configuracion o conectando otro servicio."
+    },
+    "external": {
+      "label": "Servicio externo",
+      "description": "Normalmente requiere un proveedor o componente independiente."
+    },
+    "limited": {
+      "label": "Con limites",
+      "description": "Existe, pero tiene limites de uso, compatibilidad o alcance."
+    },
+    "not_native": {
+      "label": "No incluido",
+      "description": "No es una capacidad propia de la plataforma."
+    },
+    "conditional": {
+      "label": "Depende del plan",
+      "description": "La disponibilidad depende del plan, cuenta, region o habilitacion."
+    }
+  },
+  "platforms": [
+    {
+      "id": "chatgpt_sites",
+      "name": "ChatGPT Sites",
+      "short_name": "Sites",
+      "category": "Crear y publicar",
+      "purpose": "Crear, revisar, publicar y compartir sitios web interactivos y aplicaciones ligeras desde ChatGPT.",
+      "default_address": "URL generada por ChatGPT Sites",
+      "custom_domain": {
+        "status": "conditional",
+        "label": "Disponible donde la funcion este habilitada",
+        "detail": "El propietario debe tener un dominio y poder modificar sus registros DNS."
+      },
+      "ideal_for": [
+        "Dashboards de consulta",
+        "Buscadores de documentos",
+        "Herramientas internas ligeras",
+        "Centros de recursos",
+        "Prototipos interactivos"
+      ],
+      "not_ideal_for": [
+        "Aplicaciones que necesitan cualquier framework o servicio sin restricciones",
+        "Sistemas con procesos de fondo no compatibles",
+        "Aplicaciones que procesen datos especialmente sensibles sin una revision previa"
+      ],
+      "scale": {
+        "label": "Aplicaciones ligeras",
+        "detail": "Puede alojar aplicaciones interactivas con datos y archivos. La capacidad depende de las cuotas, el entorno compatible y las funciones disponibles.",
+        "documented_limits": [
+          "La base de datos de cada Site admite hasta 10 GB.",
+          "El uso de ejecucion, alojamiento, trafico y almacenamiento esta sujeto a limites compartidos.",
+          "Algunos frameworks, redes privadas, bases de datos y servicios en segundo plano pueden no ser compatibles."
+        ]
+      },
+      "access_control": {
+        "status": "included",
+        "label": "Privado por defecto",
+        "detail": "Se puede compartir con personas seleccionadas, grupos, el espacio de trabajo o el publico cuando la configuracion lo permite. En Enterprise, la publicacion publica esta desactivada por defecto y requiere habilitacion administrativa.",
+        "application_login_note": "El acceso al Site y el inicio de sesion dentro de la aplicacion son controles distintos. Revisar ambos."
+      },
+      "security": {
+        "status": "limited",
+        "label": "Controles de acceso del entorno",
+        "detail": "Incluye opciones de privacidad y permisos para compartir. Las aplicaciones conectadas utilizan los permisos propios de cada visitante.",
+        "caution": "No asumir que sustituye una arquitectura de seguridad empresarial. Revisar los datos permitidos, el entorno y las politicas del espacio de trabajo."
+      },
+      "backend_components": {
+        "database": {
+          "status": "included",
+          "label": "Base de datos incluida",
+          "detail": "Hasta 10 GB por Site."
+        },
+        "user_accounts": {
+          "status": "limited",
+          "label": "Acceso y autenticacion compatibles",
+          "detail": "Incluye controles de acceso al Site y funciones de inicio de sesion compatibles con el entorno. No asumir que equivale a cualquier sistema empresarial de identidad."
+        },
+        "file_storage": {
+          "status": "included",
+          "label": "Almacenamiento de archivos",
+          "detail": "Disponible con limites de uso y almacenamiento compartidos."
+        },
+        "background_work": {
+          "status": "limited",
+          "label": "Procesos adicionales segun compatibilidad",
+          "detail": "Algunos servicios en segundo plano no son compatibles. Los tuneles a servicios privados estan disponibles para espacios de trabajo elegibles."
+        }
+      },
+      "activity_records": {
+        "status": "limited",
+        "label": "Datos operativos del Site",
+        "detail": "Puede incluir registros y datos operativos para alojar, proteger y depurar. No asumir que es una auditoria de negocio completa."
+      },
+      "code_and_portability": {
+        "status": "configurable",
+        "label": "Codigo exportable con Codex",
+        "detail": "Se puede pedir a Codex que exporte el codigo. La base de datos y los archivos cargados no se respaldan juntos con el codigo; hay que tratarlos por separado."
+      },
+      "technology_flexibility": {
+        "label": "Entorno compatible con Sites",
+        "detail": "Permite aplicaciones web ligeras, pero algunos frameworks, servicios, bases de datos y patrones de alojamiento pueden no estar admitidos."
+      },
+      "publishing": {
+        "label": "Crear, revisar y publicar desde ChatGPT",
+        "detail": "Los nuevos Sites son privados por defecto. Se revisa una vista previa antes de publicar y se elige la audiencia."
+      },
+      "pricing": {
+        "entry": "Incluido en planes elegibles de ChatGPT Plus, Pro, Business y Enterprise.",
+        "model": "El uso de Codex para crear o editar se contabiliza segun el plan. El uso de ejecucion, alojamiento, trafico y almacenamiento se contabiliza por separado y esta sujeto a limites.",
+        "enterprise_note": "Actualmente, el alojamiento de Sites en espacios Enterprise esta exento de cargos; los limites de uso y almacenamiento siguen aplicando.",
+        "commercial_note": "Revisar permisos del espacio de trabajo, politicas internas y condiciones de uso antes de publicar."
+      },
+      "fit_tags": [
+        "dashboard",
+        "documentos",
+        "herramienta_ligera",
+        "aplicacion_interna",
+        "chatgpt",
+        "sin_backend_complejo"
+      ],
+      "source_ids": [
+        "openai_sites",
+        "openai_sites_workspace",
+        "openai_sites_responsibilities"
+      ]
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "short_name": "Lovable",
+      "category": "Crear aplicaciones",
+      "purpose": "Construir, alojar y publicar aplicaciones web completas mediante instrucciones en lenguaje natural.",
+      "default_address": "*.lovable.app",
+      "custom_domain": {
+        "status": "conditional",
+        "label": "Disponible en planes de pago",
+        "detail": "Se puede comprar un dominio desde Lovable o conectar uno existente."
+      },
+      "ideal_for": [
+        "Portales internos",
+        "Sistemas de reservas",
+        "CRM y herramientas comerciales",
+        "LMS y centros de aprendizaje",
+        "Aplicaciones con usuarios, datos y archivos",
+        "Productos SaaS que empiezan con una arquitectura integrada"
+      ],
+      "not_ideal_for": [
+        "Proyectos que requieren libertad total sobre cualquier tecnologia o infraestructura",
+        "Equipos que necesitan administrar cada componente en proveedores separados desde el primer dia"
+      ],
+      "scale": {
+        "label": "Aplicaciones de produccion",
+        "detail": "El alojamiento escala con el trafico. Se puede ajustar el tamano de la instancia y el almacenamiento de la base de datos.",
+        "documented_limits": [
+          "El crecimiento depende de la arquitectura, la configuracion de la base de datos y los creditos o recursos contratados.",
+          "El uso de Cloud y de funciones de IA puede generar consumo adicional."
+        ]
+      },
+      "access_control": {
+        "status": "conditional",
+        "label": "Usuarios, roles y permisos",
+        "detail": "Pro incluye roles y permisos. Business agrega publicacion restringida a miembros del espacio de trabajo y SSO. Enterprise agrega controles organizacionales avanzados."
+      },
+      "security": {
+        "status": "conditional",
+        "label": "Controles segun el plan",
+        "detail": "Business incluye Security Center y SSO. Enterprise agrega registros de auditoria, SCIM, controles de datos sensibles y analisis de seguridad programados.",
+        "caution": "Las comprobaciones automatizadas de seguridad no equivalen por si solas a una auditoria integral de la aplicacion."
+      },
+      "backend_components": {
+        "database": {
+          "status": "included",
+          "label": "Base de datos integrada",
+          "detail": "Backend administrado basado en la tecnologia abierta de Supabase."
+        },
+        "user_accounts": {
+          "status": "included",
+          "label": "Registro e inicio de sesion",
+          "detail": "Autenticacion y administracion de usuarios integradas."
+        },
+        "file_storage": {
+          "status": "included",
+          "label": "Archivos integrados",
+          "detail": "Almacenamiento de documentos, imagenes y otros archivos."
+        },
+        "background_work": {
+          "status": "included",
+          "label": "Funciones y tareas",
+          "detail": "Funciones de servidor, webhooks y tareas programadas."
+        }
+      },
+      "activity_records": {
+        "status": "conditional",
+        "label": "Registros tecnicos y auditoria segun plan",
+        "detail": "Incluye logs del backend. Los registros de auditoria organizacional son una funcion Enterprise."
+      },
+      "code_and_portability": {
+        "status": "included",
+        "label": "Codigo propio y sincronizacion con GitHub",
+        "detail": "El usuario es propietario del codigo. La sincronizacion con GitHub es bidireccional. La descarga directa del codigo esta disponible en planes de pago."
+      },
+      "technology_flexibility": {
+        "label": "Stack web guiado",
+        "detail": "Lovable genera una arquitectura web definida. El codigo puede exportarse y continuarse fuera de Lovable, pero la plataforma no es un alojamiento universal para cualquier tipo de software."
+      },
+      "publishing": {
+        "label": "Publicar desde Lovable",
+        "detail": "Lovable aloja la aplicacion y su backend integrado. Los cambios se pueden sincronizar con GitHub."
+      },
+      "pricing": {
+        "entry": "Free: US$0. Pro: US$25/mes. Business: US$50/mes. Enterprise: precio a medida.",
+        "model": "Los planes incluyen creditos para construir y usar Cloud. El uso de alojamiento y funciones de IA consume creditos; aplicaciones con trafico o volumen significativo pueden requerir creditos adicionales.",
+        "commercial_note": "Revisar el plan, el consumo de Cloud, las funciones empresariales y los requisitos de la organizacion."
+      },
+      "fit_tags": [
+        "aplicacion_interna",
+        "usuarios",
+        "base_de_datos",
+        "archivos",
+        "crm",
+        "reservas",
+        "saas",
+        "construccion_ia"
+      ],
+      "source_ids": [
+        "lovable_backend",
+        "lovable_github",
+        "lovable_domains",
+        "lovable_pricing"
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "short_name": "Vercel",
+      "category": "Publicar y operar",
+      "purpose": "Publicar aplicaciones creadas con diferentes herramientas y mantener un flujo organizado de actualizaciones.",
+      "default_address": "*.vercel.app",
+      "custom_domain": {
+        "status": "included",
+        "label": "Si",
+        "detail": "Permite conectar dominios propios. El plan Pro incluye dominio personalizado."
+      },
+      "ideal_for": [
+        "Aplicaciones creadas con Codex, Lovable u otras herramientas",
+        "Productos web y SaaS",
+        "Aplicaciones con alto trafico",
+        "Equipos que trabajan con GitHub y revisan cambios antes de publicar",
+        "Proyectos que requieren libertad para elegir servicios y tecnologias"
+      ],
+      "not_ideal_for": [
+        "Equipos que esperan que la plataforma incluya automaticamente una base de datos empresarial y toda la gestion de usuarios",
+        "Proyectos comerciales alojados en el plan Hobby"
+      ],
+      "scale": {
+        "label": "Aplicaciones web de alto trafico",
+        "detail": "Ofrece red global, distribucion de contenido y funciones que pueden crecer con la demanda. El resultado depende de la arquitectura, los limites del plan y el consumo.",
+        "documented_limits": [
+          "El plan Hobby tiene limites de uso y es para proyectos personales y no comerciales.",
+          "El plan Pro incluye creditos de uso; el consumo adicional se factura segun los recursos utilizados.",
+          "Las garantias y capacidades empresariales avanzadas dependen del plan Enterprise."
+        ]
+      },
+      "access_control": {
+        "status": "configurable",
+        "label": "Proteccion del sitio y de las versiones de prueba",
+        "detail": "Vercel Authentication puede restringir despliegues de prueba. Pro y Enterprise permiten proteger tambien los dominios de produccion. El inicio de sesion y los permisos de los usuarios de la aplicacion se implementan por separado."
+      },
+      "security": {
+        "status": "included",
+        "label": "Proteccion de infraestructura",
+        "detail": "Incluye mitigacion DDoS y firewall. Permite reglas de proteccion y observabilidad. Funciones de gobierno como SSO, SCIM y auditoria avanzada dependen del plan.",
+        "caution": "El firewall de la plataforma no sustituye la autenticacion, autorizacion por roles ni validacion de datos dentro de la aplicacion."
+      },
+      "backend_components": {
+        "database": {
+          "status": "external",
+          "label": "Conectar una base de datos",
+          "detail": "Se conecta con proveedores de bases de datos y servicios disponibles en el ecosistema de integraciones."
+        },
+        "user_accounts": {
+          "status": "external",
+          "label": "Conectar autenticacion",
+          "detail": "Normalmente se utiliza un proveedor de identidad o autenticacion independiente."
+        },
+        "file_storage": {
+          "status": "configurable",
+          "label": "Almacenamiento propio o conectado",
+          "detail": "Puede utilizar Vercel Blob o servicios externos."
+        },
+        "background_work": {
+          "status": "configurable",
+          "label": "Funciones y servicios adicionales",
+          "detail": "Ofrece funciones de servidor; procesos duraderos o flujos complejos pueden requerir productos o servicios adicionales."
+        }
+      },
+      "activity_records": {
+        "status": "conditional",
+        "label": "Registros tecnicos y observabilidad",
+        "detail": "Incluye logs y herramientas de observabilidad. Los registros de auditoria organizacional y algunas capacidades de gobierno dependen del plan."
+      },
+      "code_and_portability": {
+        "status": "included",
+        "label": "Codigo en repositorio propio",
+        "detail": "Vercel despliega desde GitHub u otros flujos compatibles. El codigo permanece en el repositorio del equipo."
+      },
+      "technology_flexibility": {
+        "label": "Amplia compatibilidad web",
+        "detail": "Admite numerosos frameworks web y funciones de servidor. No significa que pueda ejecutar cualquier tipo de programa o servidor sin restricciones."
+      },
+      "publishing": {
+        "label": "Publicacion automatica desde Git",
+        "detail": "Al actualizar el repositorio se puede generar una nueva version. Tambien crea versiones de prueba para ramas y cambios en revision."
+      },
+      "pricing": {
+        "entry": "Hobby: US$0, solo personal y no comercial. Pro: desde US$20/mes, con US$20 de credito de uso incluido. Enterprise: precio a medida.",
+        "model": "El uso por encima de los recursos incluidos puede generar cargos adicionales. Revisar consumo, miembros y limites antes de usarlo en produccion.",
+        "commercial_note": "No usar Hobby para aplicaciones comerciales o de la organizacion. Evaluar Pro o Enterprise y las politicas de TI."
+      },
+      "fit_tags": [
+        "saas",
+        "aplicacion_empresarial",
+        "alto_trafico",
+        "github",
+        "codex",
+        "control_tecnologico",
+        "dominio",
+        "previsualizaciones"
+      ],
+      "source_ids": [
+        "vercel_pricing",
+        "vercel_deployment_protection",
+        "vercel_firewall",
+        "vercel_domains",
+        "vercel_plans"
+      ]
+    },
+    {
+      "id": "github_pages",
+      "name": "GitHub Pages",
+      "short_name": "GitHub Pages",
+      "category": "Publicar paginas",
+      "purpose": "Publicar paginas web directamente desde un repositorio de GitHub.",
+      "default_address": "*.github.io",
+      "custom_domain": {
+        "status": "included",
+        "label": "Si",
+        "detail": "Permite utilizar un dominio propio."
+      },
+      "ideal_for": [
+        "Paginas informativas",
+        "Portafolios",
+        "Manuales y documentacion",
+        "Landing pages",
+        "Demostraciones que funcionan en el navegador"
+      ],
+      "not_ideal_for": [
+        "Aplicaciones que necesitan guardar datos de usuarios",
+        "Sistemas con contrasenas y permisos propios",
+        "Procesos que deben ejecutarse en un servidor",
+        "Aplicaciones SaaS o informacion confidencial"
+      ],
+      "scale": {
+        "label": "Paginas web estaticas",
+        "detail": "Adecuado para sitios estaticos. No es un servicio para operar aplicaciones con servidor y base de datos.",
+        "documented_limits": [
+          "Sitio publicado: maximo 1 GB.",
+          "Ancho de banda recomendado: limite flexible de 100 GB al mes.",
+          "Limite flexible de 10 publicaciones por hora, salvo flujos de GitHub Actions personalizados."
+        ]
+      },
+      "access_control": {
+        "status": "not_native",
+        "label": "Sitio publico",
+        "detail": "No ofrece inicio de sesion ni permisos de usuario para proteger una aplicacion. Un repositorio privado no convierte automaticamente el sitio publicado en privado."
+      },
+      "security": {
+        "status": "limited",
+        "label": "HTTPS para paginas publicas",
+        "detail": "Ofrece HTTPS y proteccion de la conexion. No proporciona por si solo proteccion de datos, login o permisos dentro de una aplicacion."
+      },
+      "backend_components": {
+        "database": {
+          "status": "not_native",
+          "label": "Base de datos externa",
+          "detail": "El sitio puede consumir una API externa, pero GitHub Pages no ejecuta el servidor que la gestiona."
+        },
+        "user_accounts": {
+          "status": "not_native",
+          "label": "Autenticacion externa",
+          "detail": "Se necesita otro servicio para gestionar usuarios y permisos."
+        },
+        "file_storage": {
+          "status": "not_native",
+          "label": "Archivos estaticos publicos",
+          "detail": "Puede publicar imagenes y archivos que forman parte del sitio, pero no ofrece almacenamiento dinamico para archivos que suben los usuarios."
+        },
+        "background_work": {
+          "status": "not_native",
+          "label": "Sin procesos de servidor",
+          "detail": "No ejecuta funciones de servidor ni tareas de fondo."
+        }
+      },
+      "activity_records": {
+        "status": "not_native",
+        "label": "Sin registros de uso de la aplicacion",
+        "detail": "Puede mostrar registros del proceso de publicacion, pero no registra por si solo acciones de los usuarios dentro de la pagina."
+      },
+      "code_and_portability": {
+        "status": "included",
+        "label": "Codigo en GitHub",
+        "detail": "El repositorio es la fuente del sitio y se puede clonar, descargar o trasladar."
+      },
+      "technology_flexibility": {
+        "label": "HTML, CSS y JavaScript",
+        "detail": "Puede publicar el resultado estatico de herramientas que generan archivos web. No ejecuta codigo de servidor."
+      },
+      "publishing": {
+        "label": "Publicacion desde una rama o GitHub Actions",
+        "detail": "Al actualizar la fuente de publicacion, GitHub genera una nueva version del sitio."
+      },
+      "pricing": {
+        "entry": "US$0 para repositorios publicos con GitHub Free.",
+        "model": "La publicacion desde repositorios privados requiere un plan compatible de GitHub. El sitio publicado sigue siendo publico en el uso habitual de Pages.",
+        "commercial_note": "No utilizar como alojamiento de un SaaS, comercio electronico o aplicacion empresarial transaccional."
+      },
+      "fit_tags": [
+        "pagina_estatica",
+        "landing",
+        "documentacion",
+        "portafolio",
+        "sin_backend",
+        "bajo_costo"
+      ],
+      "source_ids": [
+        "github_pages_about",
+        "github_pages_limits",
+        "github_pages_domains"
+      ]
+    },
+    {
+      "id": "render",
+      "name": "Render",
+      "short_name": "Render",
+      "category": "Aplicaciones y servicios",
+      "purpose": "Alojar aplicaciones, bases de datos y procesos que funcionan de forma continua.",
+      "default_address": "*.onrender.com",
+      "custom_domain": {
+        "status": "included",
+        "label": "Si",
+        "detail": "Permite conectar dominios propios y ofrece certificados TLS administrados."
+      },
+      "ideal_for": [
+        "Aplicaciones con servidor propio",
+        "Productos SaaS",
+        "Servicios privados",
+        "Procesos que se ejecutan en segundo plano",
+        "Aplicaciones con bases de datos administradas"
+      ],
+      "not_ideal_for": [
+        "Quien solo necesita publicar una pagina estatica y quiere la infraestructura mas simple",
+        "Produccion con instancias gratuitas"
+      ],
+      "scale": {
+        "label": "Aplicaciones y procesos continuos",
+        "detail": "Permite aumentar recursos manual o automaticamente. Tiene servicios web, servicios privados, trabajadores de fondo y tareas programadas.",
+        "documented_limits": [
+          "Las instancias gratuitas son para pruebas y no se recomiendan para produccion.",
+          "Las capacidades de escalado y operacion dependen del tipo de servicio y del plan."
+        ]
+      },
+      "access_control": {
+        "status": "configurable",
+        "label": "Servicios privados y permisos de la aplicacion",
+        "detail": "Permite crear servicios privados. El inicio de sesion, los roles y los permisos de los usuarios finales se configuran en la aplicacion o con un proveedor externo."
+      },
+      "security": {
+        "status": "included",
+        "label": "HTTPS, proteccion DDoS y servicios privados",
+        "detail": "Incluye certificados TLS, proteccion DDoS y opciones de red. Los controles de identidad y permisos de negocio requieren configuracion."
+      },
+      "backend_components": {
+        "database": {
+          "status": "configurable",
+          "label": "Base de datos administrada",
+          "detail": "Ofrece PostgreSQL administrado como servicio separado, con precio y recursos propios."
+        },
+        "user_accounts": {
+          "status": "external",
+          "label": "Autenticacion de la aplicacion",
+          "detail": "Se implementa en la aplicacion o se conecta con un proveedor de identidad."
+        },
+        "file_storage": {
+          "status": "configurable",
+          "label": "Discos persistentes o servicio externo",
+          "detail": "Puede utilizar discos persistentes; para almacenamiento de objetos y archivos de usuarios puede convenir un servicio especializado."
+        },
+        "background_work": {
+          "status": "included",
+          "label": "Trabajadores y tareas programadas",
+          "detail": "Ofrece Background Workers, Cron Jobs y otros servicios para procesos continuos."
+        }
+      },
+      "activity_records": {
+        "status": "included",
+        "label": "Logs y metricas del servicio",
+        "detail": "Permite consultar registros y metricas tecnicas. La auditoria de acciones de negocio debe construirse en la aplicacion."
+      },
+      "code_and_portability": {
+        "status": "included",
+        "label": "Codigo en repositorio propio",
+        "detail": "Se conecta a repositorios Git para construir y desplegar el servicio."
+      },
+      "technology_flexibility": {
+        "label": "Varios lenguajes y contenedores",
+        "detail": "Admite Node.js, Python, Go, Rust, Ruby, Elixir y contenedores Docker, entre otros flujos compatibles."
+      },
+      "publishing": {
+        "label": "Publicacion conectada al repositorio",
+        "detail": "Puede desplegar automaticamente al actualizar el repositorio y ofrece opciones de prueba y reversa."
+      },
+      "pricing": {
+        "entry": "Servicios gratuitos para pruebas. Servicios web de pago desde aproximadamente US$7/mes.",
+        "model": "Bases de datos, almacenamiento, transferencia y recursos adicionales pueden cobrarse por separado.",
+        "commercial_note": "No usar instancias gratuitas como base de una aplicacion de produccion."
+      },
+      "fit_tags": [
+        "saas",
+        "servidor",
+        "base_de_datos",
+        "procesos_fondo",
+        "api",
+        "servicios_privados",
+        "varios_lenguajes"
+      ],
+      "source_ids": [
+        "render_web_services",
+        "render_free",
+        "render_pricing",
+        "render_first_deploy"
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "short_name": "Cloudflare",
+      "category": "Infraestructura global",
+      "purpose": "Publicar y ejecutar aplicaciones y servicios en una red global, con herramientas de rendimiento, datos y proteccion.",
+      "default_address": "*.workers.dev o *.pages.dev",
+      "custom_domain": {
+        "status": "included",
+        "label": "Si",
+        "detail": "Permite conectar dominios propios a Pages y Workers."
+      },
+      "ideal_for": [
+        "Aplicaciones con usuarios en distintos paises",
+        "Servicios y APIs de alto volumen",
+        "Aplicaciones que necesitan ejecutar procesos cerca de sus usuarios",
+        "Productos que requieren proteccion de red y control de acceso",
+        "Arquitecturas con varios tipos de almacenamiento"
+      ],
+      "not_ideal_for": [
+        "Personas que buscan el camino mas simple sin aprender a conectar componentes",
+        "Aplicaciones que dependen de un servidor tradicional sin adaptar su arquitectura"
+      ],
+      "scale": {
+        "label": "Red global y aplicaciones distribuidas",
+        "detail": "Workers ejecuta codigo en la red global de Cloudflare. La capacidad y el costo dependen del plan, las solicitudes y los servicios utilizados.",
+        "documented_limits": [
+          "Workers Free incluye hasta 100.000 solicitudes por dia.",
+          "Workers Paid tiene un minimo de US$5/mes e incluye una cuota de uso mensual.",
+          "Bases de datos y almacenamiento tienen limites y precios propios."
+        ]
+      },
+      "access_control": {
+        "status": "configurable",
+        "label": "Control de acceso con Cloudflare Access",
+        "detail": "Puede colocar una capa de acceso delante de aplicaciones propias y validar identidad, grupos y politicas. Los permisos dentro de la aplicacion pueden requerir su propia configuracion."
+      },
+      "security": {
+        "status": "included",
+        "label": "Proteccion de red y aplicaciones",
+        "detail": "Ofrece mitigacion DDoS, firewall, WAF y Cloudflare Access. La proteccion de la infraestructura no reemplaza los permisos y controles de datos de la aplicacion."
+      },
+      "backend_components": {
+        "database": {
+          "status": "included",
+          "label": "Bases de datos y conexiones",
+          "detail": "D1 es una base de datos SQL administrada; Hyperdrive permite conectar bases existentes como PostgreSQL o MySQL."
+        },
+        "user_accounts": {
+          "status": "configurable",
+          "label": "Control de acceso e identidad",
+          "detail": "Cloudflare Access puede proteger aplicaciones. La gestion de cuentas, perfiles y roles propios del producto puede requerir otro proveedor o codigo."
+        },
+        "file_storage": {
+          "status": "included",
+          "label": "Almacenamiento de archivos",
+          "detail": "R2 permite almacenar documentos, imagenes y otros archivos."
+        },
+        "background_work": {
+          "status": "included",
+          "label": "Procesos, colas y tareas",
+          "detail": "Workers, Queues y Cron Triggers permiten ejecutar procesos y tareas programadas."
+        }
+      },
+      "activity_records": {
+        "status": "included",
+        "label": "Registros y analitica tecnica",
+        "detail": "Dispone de registros y herramientas de observacion. La auditoria de acciones de negocio debe diseñarse en la aplicacion."
+      },
+      "code_and_portability": {
+        "status": "included",
+        "label": "Codigo en repositorio propio",
+        "detail": "Puede conectar GitHub o GitLab y desplegar automaticamente al actualizar el codigo. El uso de servicios propios de Cloudflare puede requerir adaptaciones al migrar."
+      },
+      "technology_flexibility": {
+        "label": "Runtime especializado para aplicaciones web",
+        "detail": "Admite varios lenguajes y tecnologias compatibles con Workers. No equivale a un servidor tradicional sin limites."
+      },
+      "publishing": {
+        "label": "Despliegue desde GitHub o GitLab",
+        "detail": "Pages y Workers permiten conectar repositorios y automatizar despliegues. Pages ofrece versiones de prueba para ramas."
+      },
+      "pricing": {
+        "entry": "Workers Free: hasta 100.000 solicitudes al dia. Workers Paid: desde US$5/mes.",
+        "model": "El plan de pago incluye una cuota de uso; el consumo adicional se cobra segun solicitudes y recursos. D1, R2 y otros servicios tienen sus propias cuotas y precios.",
+        "commercial_note": "Revisar los limites y el consumo de cada producto. No interpretar el plan gratuito como capacidad ilimitada."
+      },
+      "fit_tags": [
+        "alto_trafico",
+        "global",
+        "api",
+        "seguridad",
+        "base_de_datos",
+        "archivos",
+        "procesos_fondo",
+        "aplicacion_distribuida"
+      ],
+      "source_ids": [
+        "cloudflare_workers_pricing",
+        "cloudflare_workers_limits",
+        "cloudflare_storage",
+        "cloudflare_access",
+        "cloudflare_git",
+        "cloudflare_custom_domains"
+      ]
+    }
+  ]
+}
